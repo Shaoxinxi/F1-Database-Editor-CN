@@ -4843,21 +4843,21 @@ export function loadRecordsList(data) {
 
         let totalStarts = document.createElement("div")
         totalStarts.classList = "extra-stat"
-        totalStarts.textContent = `Races: ${record.totalStarts}`
+        totalStarts.textContent = `参赛场次: ${record.totalStarts}`
 
         let percentageRate = document.createElement("div")
         percentageRate.classList = "extra-stat perecentage-rate"
         if (record.record === "wins" || record.record === "champs") {
-            percentageRate.textContent = `Win Rate: ${(record.totalWins / record.totalStarts * 100).toFixed(2)}%`
+            percentageRate.textContent = `胜率: ${(record.totalWins / record.totalStarts * 100).toFixed(2)}%`
         }
         else if (record.record === "podiums") {
-            percentageRate.textContent = `Podium Rate: ${(record.totalPodiums / record.totalStarts * 100).toFixed(2)}%`
+            percentageRate.textContent = `登台率: ${(record.totalPodiums / record.totalStarts * 100).toFixed(2)}%`
         }
         else if (record.record === "poles") {
-            percentageRate.textContent = `Pole Rate: ${(record.totalPoles / record.totalStarts * 100).toFixed(2)}%`
+            percentageRate.textContent = `杆位率: ${(record.totalPoles / record.totalStarts * 100).toFixed(2)}%`
         }
         else if (record.record === "fastestlaps") {
-            percentageRate.textContent = `Fastest Lap Rate: ${(record.totalFastestLaps / record.totalStarts * 100).toFixed(2)}%`
+            percentageRate.textContent = `最快圈速率: ${(record.totalFastestLaps / record.totalStarts * 100).toFixed(2)}%`
         }
         if (record.record !== "races" && record.record !== "points" && record.record !== "dotd") {
             extraStatsSection.appendChild(percentageRate)
@@ -4885,31 +4885,31 @@ export function loadRecordsList(data) {
 
         let fastestLaps = document.createElement("div")
         fastestLaps.classList = "extra-stat"
-        fastestLaps.textContent = `Fastest Laps: ${record.totalFastestLaps}`
+        fastestLaps.textContent = `最快圈速: ${record.totalFastestLaps}`
 
         let sprintWins = document.createElement("div")
         sprintWins.classList = "extra-stat"
-        sprintWins.textContent = `Sprint Wins: ${record.totalSprintWins}`
+        sprintWins.textContent = `冲刺赛冠军: ${record.totalSprintWins}`
 
         let poles = document.createElement("div")
         poles.classList = "extra-stat"
-        poles.textContent = `Poles: ${record.totalPoles}`
+        poles.textContent = `杆位: ${record.totalPoles}`
 
         let podiums = document.createElement("div")
         podiums.classList = "extra-stat"
-        podiums.textContent = `Podiums: ${record.totalPodiums}`
+        podiums.textContent = `登台: ${record.totalPodiums}`
 
         let points = document.createElement("div")
         points.classList = "extra-stat"
-        points.textContent = `Points: ${record.totalPointsScored}`
+        points.textContent = `积分: ${record.totalPointsScored}`
 
         let wins = document.createElement("div")
         wins.classList = "extra-stat"
-        wins.textContent = `Wins: ${record.totalWins}`
+        wins.textContent = `冠军: ${record.totalWins}`
 
         let champs = document.createElement("div")
         champs.classList = "extra-stat"
-        champs.textContent = `WDCs: ${record.totalChampionshipWins}`
+        champs.textContent = `世界冠军: ${record.totalChampionshipWins}`
 
         if (document.querySelector("#yearButton").dataset.year === "all" && record.record !== "races") {
             extraStatsSection.appendChild(totalStarts)
