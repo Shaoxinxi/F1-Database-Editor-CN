@@ -10566,6 +10566,8 @@ body.og-theme .records-list {
   justify-content: flex-start;
   align-items: center;
   padding-left: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 
@@ -10769,6 +10771,7 @@ body.og-theme .records-list {
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
+  flex-shrink: 0;
 }
 
 .pill-label {
@@ -10782,9 +10785,10 @@ body.og-theme .records-list {
   pointer-events: auto;
   white-space: nowrap;
   font-size: 13px;
-  max-width: 52px;
+  width: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-shrink: 0;
 }
 
 .pill-line {
