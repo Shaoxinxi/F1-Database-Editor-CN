@@ -10558,7 +10558,9 @@ body.og-theme .records-list {
   color: var(--text-general) !important;
   border: 2px solid transparent !important;
   transition: border-color 0.15s, background-color 0.15s, color 0.15s !important;
-  width: 90px;
+  width: 90px !important;
+  min-width: 90px !important;
+  max-width: 90px !important;
   height: 44px;
   display: flex;
   position: relative;
@@ -10566,8 +10568,20 @@ body.og-theme .records-list {
   justify-content: flex-start;
   align-items: center;
   padding-left: 8px;
+  padding-right: 8px;
   overflow: hidden;
   box-sizing: border-box;
+}
+
+.scriptPills:hover,
+.scriptPills:focus,
+.scriptPills:focus-visible,
+.scriptPills.active {
+  width: 90px !important;
+  min-width: 90px !important;
+  max-width: 90px !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 
