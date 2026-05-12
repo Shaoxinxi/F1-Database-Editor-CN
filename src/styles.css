@@ -3149,6 +3149,13 @@ body.mclaren-theme .background {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
+/* 让nav-pills横向排列 */
+.script-selector .nav.nav-pills {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
 .script-selector .nav-pills > li.nav-item {
   opacity: 1;
   transform: none;
@@ -10551,11 +10558,14 @@ body.og-theme .records-list {
   color: var(--text-general) !important;
   border: 2px solid transparent !important;
   transition: border-color 0.15s, background-color 0.15s, color 0.15s, width 0.15s !important;
-  width: 44px;
-  height: 40px;
+  width: 90px;
+  height: 44px;
   display: flex;
   position: relative;
   background: none;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 8px;
 }
 
 
@@ -10754,18 +10764,27 @@ body.og-theme .records-list {
 .pill-icon {
   opacity: 1;
   transition: opacity 0.10s;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
-  bottom: 5px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .pill-label {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.10s;
   position: absolute;
-  left: 10px;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  pointer-events: none;
+  pointer-events: auto;
+  white-space: nowrap;
+  font-size: 13px;
+  max-width: 52px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pill-line {
@@ -10779,20 +10798,7 @@ body.og-theme .records-list {
   pointer-events: none;
 }
 
-.scriptPills:hover .pill-icon,
-.scriptPills.active .pill-icon {
-  opacity: 0;
-}
 
-.scriptPills:hover .pill-label,
-.scriptPills.active .pill-label {
-  opacity: 1;
-}
-
-
-.scriptPills:hover {
-  width: 135px;
-}
 
 .scriptPills::before {
   content: '';
