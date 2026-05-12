@@ -2035,7 +2035,7 @@ if (panicDownloadButton) {
  * checks if a save and a script have been selected to unlock the tool
  */
 function check_selected() {
-    if (isSaveSelected == 1 && scriptSelected == 1 && divBlocking == 1) {
+    if (isSaveSelected == 1 && scriptSelected >= 0 && divBlocking == 1) {
         document.getElementById("blockDiv").classList.add("disappear")
         divBlocking = 0;
     }
