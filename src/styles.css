@@ -144,7 +144,7 @@ body.og-theme .footer i {
   bottom: 60px;
   right: -17px;
   z-index: 1000;
-  padding: 13px 25px 13px 15px;
+  padding: 13px 30px 13px 20px;
   background-color: var(--new-primary);
   color: var(--negative-text);
   border: none;
@@ -154,6 +154,7 @@ body.og-theme .footer i {
   border-radius: 10px;
   font-size: 18px;
   box-shadow: var(--shadow-m);
+  min-width: 180px;
 }
 
 .save-button:active {
@@ -539,15 +540,21 @@ patreon-button:active .patreon-button-text {
 
 .save-button .save-label {
   opacity: 1;
+  margin-left: 20px;
+  transition: opacity 0.15s;
+  cursor: pointer;
 }
 
-.save.button i {
-  opacity: 0;
+.save-button i {
+  transition: opacity 0.15s, color 0.15s;
+  cursor: pointer;
+  color: var(--negative-text);
 }
 
 .save-button:hover i,
 .save-button.first-show i {
-  opacity: 0;
+  opacity: 1;
+  color: var(--white-general);
 }
 
 .save-button:hover .save-label,
@@ -562,9 +569,10 @@ patreon-button:active .patreon-button-text {
 
 .save-button i {
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 18px;
 }
 
 .twenty-three,
