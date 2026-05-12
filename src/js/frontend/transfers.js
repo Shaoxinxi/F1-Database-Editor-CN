@@ -1637,7 +1637,7 @@ function setLineupsButtonState(isOpen) {
     const icon = lineupsViewButton.querySelector("i");
 
     if (label) {
-        label.textContent = isOpen ? "Transfers" : "Line ups";
+        label.textContent = isOpen ? "合同" : "阵容";
     }
     if (icon) {
         icon.className = isOpen ? "bi bi-arrow-return-left" : "bi bi-diagram-3";
