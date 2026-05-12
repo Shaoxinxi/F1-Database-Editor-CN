@@ -142,10 +142,10 @@ body.og-theme .footer i {
 .save-button {
   position: fixed;
   bottom: 60px;
-  right: -146px;
+  right: -17px;
   z-index: 1000;
   padding: 13px 25px 13px 15px;
-  background-color: var(--text-general);
+  background-color: var(--new-primary);
   color: var(--negative-text);
   border: none;
   border-radius: 5px;
@@ -164,8 +164,8 @@ body.og-theme .footer i {
 
 @keyframes slideAndColorChange {
   0% {
-    right: -146px;
-    background-color: var(--text-general);
+    right: -17px;
+    background-color: var(--new-primary);
   }
 
   10% {
@@ -193,8 +193,8 @@ body.og-theme .footer i {
   }
 
   100% {
-    right: -146px;
-    background-color: var(--text-general);
+    right: -17px;
+    background-color: var(--new-primary);
   }
 }
 
@@ -538,11 +538,11 @@ patreon-button:active .patreon-button-text {
 }
 
 .save-button .save-label {
-  opacity: 0;
+  opacity: 1;
 }
 
 .save.button i {
-  opacity: 1;
+  opacity: 0;
 }
 
 .save-button:hover i,
@@ -557,7 +557,7 @@ patreon-button:active .patreon-button-text {
 
 .save-button:hover {
   right: -17px;
-  background-color: var(--new-primary);
+  background-color: var(--new-primary-dark);
 }
 
 .save-button i {
