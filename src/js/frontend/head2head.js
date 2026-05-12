@@ -965,8 +965,8 @@ document.querySelector("#confirmComparison").addEventListener("click", function 
         document.querySelector("#raceForm").click()
         race = 0
         quali = 0
-        document.getElementById("qualih2h").querySelector(".only-name").innerText = "QUALIFYING"
-        document.getElementById("raceh2h").querySelector(".only-name").innerText = "RACE"
+        document.getElementById("qualih2h").querySelector(".only-name").innerText = "排位赛"
+        document.getElementById("raceh2h").querySelector(".only-name").innerText = "正赛"
         document.getElementById("raceh2h").querySelector(".bar-space").classList.remove("d-none")
         document.getElementById("raceh2h").querySelector(".avg-comparison").classList.add("d-none")
         document.getElementById("qualih2h").querySelector(".bar-space").classList.remove("d-none")
@@ -980,8 +980,8 @@ document.querySelector("#confirmComparison").addEventListener("click", function 
         document.querySelector("#pointsProgression").click()
         race = 0
         quali = 0
-        document.getElementById("qualih2h").querySelector(".only-name").innerText = "QUALIFYING"
-        document.getElementById("raceh2h").querySelector(".only-name").innerText = "RACE"
+        document.getElementById("qualih2h").querySelector(".only-name").innerText = "排位赛"
+        document.getElementById("raceh2h").querySelector(".only-name").innerText = "正赛"
         document.getElementById("raceh2h").querySelector(".bar-space").classList.remove("d-none")
         document.getElementById("raceh2h").querySelector(".avg-comparison").classList.add("d-none")
         document.getElementById("qualih2h").querySelector(".bar-space").classList.remove("d-none")
