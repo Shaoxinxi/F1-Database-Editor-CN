@@ -10557,7 +10557,7 @@ body.og-theme .records-list {
 .scriptPills {
   color: var(--text-general) !important;
   border: 2px solid transparent !important;
-  transition: border-color 0.15s, background-color 0.15s, color 0.15s, width 0.15s !important;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s !important;
   width: 90px;
   height: 44px;
   display: flex;
