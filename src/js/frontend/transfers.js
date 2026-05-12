@@ -1,5 +1,6 @@
 import { staff_pics, team_dict, combined_dict, staff_positions, typeStaff_dict, f1_teams, f2_teams, f3_teams, inverted_dict, getUpdatedName, logos_disc } from "./config";
 import { attachHold, game_version, make_name_prettier } from "./renderer";
+import { getDriverName, getTeamName } from '../nameMapper.js';
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
 import interact from 'interactjs';
 import { Command } from "../backend/command.js";
@@ -93,6 +94,9 @@ export function format_name(fullName, nameSplitted, spanName, spanLastName, only
     const lastName = nameArray[nameArray.length - 1] || "";
     const middleNames = nameArray.slice(1, -1);
 
+    // 尝试将姓氏转换为中文
+    const chineseLastName = getDriverName(lastName);
+
     if (String(fullName || "").length > 17) {
         if (insert_space(firstName).includes(" ")) {
             let splitName = insert_space(firstName).split(" ");
@@ -106,15 +110,15 @@ export function format_name(fullName, nameSplitted, spanName, spanLastName, only
         }
         spanName.textContent = spanName.textContent + " ";
 
-        spanLastName.textContent = (onlyLastWordLastName ? lastName : nameArray.slice(1).join(" ")).toUpperCase();
+        spanLastName.textContent = (onlyLastWordLastName ? chineseLastName : nameArray.slice(1).join(" ")).toUpperCase();
     } else {
         const parts = Array.isArray(nameSplitted) ? nameSplitted.filter(Boolean) : [];
         if (onlyLastWordLastName && parts.length > 1) {
             spanName.textContent = parts.slice(0, -1).map(p => insert_space(p)).join(" ").trim() + " ";
-            spanLastName.textContent = String(parts[parts.length - 1] || "").toUpperCase();
+            spanLastName.textContent = String(chineseLastName || parts[parts.length - 1] || "").toUpperCase();
         } else {
             spanName.textContent = insert_space(parts[0] || "") + " ";
-            spanLastName.textContent = parts.slice(1).join(" ").toUpperCase();
+            spanLastName.textContent = chineseLastName || parts.slice(1).join(" ").toUpperCase();
         }
     }
 }

@@ -1,0 +1,87 @@
+{
+  "common": {
+    "save": "Save",
+    "load": "Load",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "apply": "Apply",
+    "applied": "Applied",
+    "search": "Search...",
+    "language": "Language",
+    "settings": "Settings",
+    "download": "Download",
+    "upload": "Upload",
+    "reset": "Reset",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "open": "Open"
+  },
+  "editor": {
+    "title": "F1 Manager Database Editor",
+    "subtitle": "Edit your save file",
+    "loadSave": "Load Save",
+    "saveFile": "Save File",
+    "dragDrop": "Drag & drop save file here",
+    "orClick": "or click to select file"
+  },
+  "tabs": {
+    "drivers": "Drivers",
+    "staff": "Staff",
+    "teams": "Teams",
+    "cars": "Cars",
+    "calendar": "Calendar",
+    "regulations": "Regulations",
+    "performance": "Performance",
+    "transfers": "Transfers",
+    "stats": "Stats",
+    "seasonViewer": "Season Viewer",
+    "head2head": "Head to Head",
+    "news": "News",
+    "seasonMods": "Season Mods"
+  },
+  "driver": {
+    "transfer": "Transfer",
+    "contract": "Contract",
+    "stats": "Stats",
+    "name": "Name",
+    "team": "Team",
+    "overall": "Overall",
+    "pace": "Pace",
+    "experience": "Experience",
+    "consistency": "Consistency",
+    "overtaking": "Overtaking",
+    "defense": "Defense",
+    "qualifying": "Qualifying",
+    "race": "Race",
+    "mentality": "Mentality",
+    "marketability": "Marketability"
+  },
+  "team": {
+    "facilities": "Facilities",
+    "budget": "Budget",
+    "objectives": "Objectives",
+    "pitCrew": "Pit Crew",
+    "engine": "Engine",
+    "name": "Team Name"
+  },
+  "season": {
+    "year": "Season Year",
+    "2025": "Season 2025",
+    "2026": "Season 2026",
+    "mods": "Season Mods",
+    "apply": "Apply Mods"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "saveSuccess": "Save successful",
+    "loadSuccess": "Load successful",
+    "applySuccess": "Apply successful",
+    "invalidFile": "Invalid file",
+    "confirmAction": "Confirm this action?"
+  }
+}

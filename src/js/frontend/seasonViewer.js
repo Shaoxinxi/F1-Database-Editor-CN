@@ -2,6 +2,7 @@ import { races_names, names_full, team_dict, codes_dict, countries_data, combine
 import { resetH2H, queueAutoCompareDrivers } from './head2head';
 import { game_version, custom_team, manageSaveButton, new_update_notifications, seasonModData, updateFront } from "./renderer";
 import { insert_space, manageColor, setCurrentSeason, format_name } from "./transfers";
+import { getTeamName } from '../nameMapper.js';
 import { news_insert_space } from "../backend/scriptUtils/newsUtils.js";
 import { Command } from "../backend/command.js";
 
@@ -2977,8 +2978,12 @@ function ensureWinsDriversListHeightListener() {
 
 function formatTeamNameForDisplay(teamName, { upper = false } = {}) {
     const raw = String(teamName ?? "").trim();
-    const rawUpper = raw.toUpperCase();
-    const shortened = rawUpper === "VISA CASHAPP RB" ? "VCARB" : raw;
+    
+    // 尝试转换为中文名称
+    const chineseName = getTeamName(raw);
+    
+    const rawUpper = chineseName.toUpperCase();
+    const shortened = rawUpper === "VISA CASHAPP RB" || rawUpper === "VISA CASH APP RB车队" ? "VCARB" : chineseName;
     return upper ? shortened.toUpperCase() : shortened;
 }
 

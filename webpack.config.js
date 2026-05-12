@@ -33,6 +33,10 @@ module.exports = {
         {
           from: 'src/data',
           to: 'data'
+        },
+        {
+          from: 'src/locales',
+          to: 'locales'
         }
 
       ]

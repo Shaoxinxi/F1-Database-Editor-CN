@@ -2,6 +2,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 
+// 中文名称映射
+import './js/nameMapper.js';
+
 // Resto de imports
 import interact from 'interactjs';
 

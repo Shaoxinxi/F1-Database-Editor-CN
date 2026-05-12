@@ -1,0 +1,87 @@
+{
+  "common": {
+    "save": "保存",
+    "load": "加载",
+    "edit": "编辑",
+    "delete": "删除",
+    "cancel": "取消",
+    "confirm": "确认",
+    "apply": "应用",
+    "applied": "已应用",
+    "search": "搜索...",
+    "language": "语言",
+    "settings": "设置",
+    "download": "下载",
+    "upload": "上传",
+    "reset": "重置",
+    "back": "返回",
+    "next": "下一步",
+    "close": "关闭",
+    "open": "打开"
+  },
+  "editor": {
+    "title": "F1 Manager 数据库编辑器",
+    "subtitle": "编辑你的存档文件",
+    "loadSave": "加载存档",
+    "saveFile": "保存文件",
+    "dragDrop": "拖拽存档文件到这里",
+    "orClick": "或点击选择文件"
+  },
+  "tabs": {
+    "drivers": "车手",
+    "staff": "工作人员",
+    "teams": "车队",
+    "cars": "赛车",
+    "calendar": "赛历",
+    "regulations": "规则",
+    "performance": "性能",
+    "transfers": "转会",
+    "stats": "数据",
+    "seasonViewer": "赛季浏览",
+    "head2head": "对比",
+    "news": "新闻",
+    "seasonMods": "赛季模组"
+  },
+  "driver": {
+    "transfer": "转会",
+    "contract": "合同",
+    "stats": "数据",
+    "name": "姓名",
+    "team": "车队",
+    "overall": "总评",
+    "pace": "节奏",
+    "experience": "经验",
+    "consistency": "稳定性",
+    "overtaking": "超车",
+    "defense": "防守",
+    "qualifying": "排位赛",
+    "race": "正赛",
+    "mentality": "心理",
+    "marketability": "商业价值"
+  },
+  "team": {
+    "facilities": "设施",
+    "budget": "预算",
+    "objectives": "目标",
+    "pitCrew": "维修团队",
+    "engine": "引擎",
+    "name": "车队名称"
+  },
+  "season": {
+    "year": "赛季年份",
+    "2025": "2025赛季",
+    "2026": "2026赛季",
+    "mods": "赛季模组",
+    "apply": "应用模组"
+  },
+  "messages": {
+    "loading": "加载中...",
+    "success": "操作成功",
+    "error": "操作失败",
+    "saveSuccess": "保存成功",
+    "loadSuccess": "加载成功",
+    "applySuccess": "应用成功",
+    "invalidFile": "无效的文件",
+    "confirmAction": "确认执行此操作？"
+  }
+}

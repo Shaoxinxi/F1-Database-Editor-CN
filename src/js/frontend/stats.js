@@ -3,6 +3,7 @@ import { team_dict, mentalityModifiers, teamOrder, mentality_dict, combined_dict
 import { colors_dict } from "./head2head";
 import { attachHold } from "./renderer";
 import { insert_space, manageColor, format_name } from "./transfers";
+import { getDriverName, getTeamName } from '../nameMapper.js';
 import Chart from 'chart.js/auto';
 
 
@@ -436,6 +437,9 @@ export function getName(html) {
     })
 
     name = name.slice(0, -1)
+
+    // 尝试转换为中文名称
+    name = getDriverName(name);
 
     return name;
 
