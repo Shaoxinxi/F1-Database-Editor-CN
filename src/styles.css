@@ -10798,8 +10798,9 @@ body.og-theme .records-list {
   background-color: var(--white-general);
   position: absolute;
   bottom: 0;
-  left: -2px;
+  left: 0;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 
@@ -10816,6 +10817,8 @@ body.og-theme .records-list {
   transition: opacity 0.25s ease;
   transition-delay: 0.15s;
   pointer-events: none;
+  box-sizing: border-box;
+  z-index: -1;
 }
 
 .scriptPills.active {
@@ -10831,6 +10834,13 @@ body.og-theme .records-list {
 
 .scriptPills .pill-line {
   background-color: var(--new-primary);
+  width: 0%;
+}
+
+.scriptPills:hover .pill-line,
+.scriptPills.active .pill-line {
+  width: calc(100% - 4px);
+  left: 2px;
 }
 
 .ai-pills::before {
