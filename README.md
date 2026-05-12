@@ -1,3 +1,11 @@
+# F1 Manager Database Editor - 中文汉化版
+
+> 🇨🇳 This is a Chinese localization version based on [IUrreta/DatabaseEditor](https://github.com/IUrreta/DatabaseEditor)
+> 
+> 这是基于原项目的中文汉化版本，由GAM团队维护
+
+---
+
 <img width="1875" height="625" alt="Copia de DATABASE EDITOR F1 MANAGER 23" src="https://github.com/user-attachments/assets/7cb4d0ae-f6a5-4d79-9ab5-139e5f5513e2" />
 
 <h3>OPEN SOURCE TOOL TO EDIT YOUR SAVE FILES FROM F1 MANAGER 23 & 24</h3>
