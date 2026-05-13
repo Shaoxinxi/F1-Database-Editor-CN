@@ -1,3 +1,5 @@
+import { zh_country_names } from "./zh_countries.js";
+
 export const countries_abreviations = {
     "Andorra": "AD",
     "United Arab Emirates": "AE",
@@ -251,5 +253,5 @@ export const countries_abreviations = {
 }
 
 export const inverted_countries_abreviations = Object.fromEntries(
-    Object.entries(countries_abreviations).map(([key, value]) => [value, key])
+    Object.entries(countries_abreviations).map(([key, value]) => [value, zh_country_names[key] || key])
 );

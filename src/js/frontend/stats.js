@@ -53,7 +53,7 @@ function setAttributesTitle(typeStaff) {
     const config = staffTypeConfig[String(typeStaff ?? "0")] || staffTypeConfig["0"];
     const titleText = document.getElementById("attributesTitleText");
     if (titleText) {
-        titleText.textContent = `${config.label} Attributes`;
+        titleText.textContent = `${config.label}属性`;
     }
 }
 
@@ -224,7 +224,7 @@ export function place_drivers_editStats(driversArray) {
                 let comparingTag = document.createElement("span");
                 let teamClass = team_dict[newDiv.dataset.teamid];
                 comparingTag.className = `comparing-tag ${teamClass}`;
-                comparingTag.textContent = "Comparing";
+                comparingTag.textContent = "对比中";
                 nameDiv.appendChild(comparingTag);
                 secondDriverStats = newDiv.dataset.stats;
                 updateComparisonUI();
@@ -371,7 +371,7 @@ export function place_staff_editStats(staffArray) {
                 let comparingTag = document.createElement("span");
                 let teamClass = team_dict[newDiv.dataset.teamid];
                 comparingTag.className = `comparing-tag ${teamClass}`;
-                comparingTag.textContent = "Comparing";
+                comparingTag.textContent = "对比中";
                 nameDiv.appendChild(comparingTag);
                 secondDriverStats = newDiv.dataset.stats;
                 updateComparisonUI();
@@ -889,7 +889,7 @@ function updateDraftControlVisibility(div) {
     const icon = genderSwapButton.querySelector("i");
     const label = genderSwapButton.querySelector(".button-text");
     icon.className = isFemale ? "bi bi-gender-female" : "bi bi-gender-male";
-    label.textContent = isFemale ? "Female" : "Male";
+    label.textContent = isFemale ? "女" : "男";
 }
 
 function enterNameEditMode() {
@@ -1635,7 +1635,7 @@ function toggleComparisonMode() {
         });
 
         document.querySelectorAll(".shorten-ret").forEach(elem => {
-            elem.innerText = "Retirement"
+            elem.innerText = "退役"
         });
 
         // Remove cloned elements

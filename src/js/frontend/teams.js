@@ -251,7 +251,7 @@ document.querySelectorAll("#engineMenu a").forEach(function (elem) {
 export function resetTeamEditing() {
     document.querySelector(".team-viewer").classList.add("d-none");
     teamCod = null;
-    document.querySelector("#teamButton").innerText = "Team";
+    document.querySelector("#teamButton").innerText = "车队";
 }
 
 

@@ -627,9 +627,9 @@ export function getParamMap(data) {
 }
 
 export const opinionDict = {
-    "0": "Positive",
-    "1": "Neutral",
-    "2": "Negative"
+    "0": "积极",
+    "1": "中立",
+    "2": "消极"
 }
 
 

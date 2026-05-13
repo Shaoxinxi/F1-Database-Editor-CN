@@ -945,15 +945,15 @@ function setPerformanceView(view) {
     performanceGraphButton.classList.add("active");
     if (view === "graph") {
         performanceGraphIcon.className = "bi bi-graph-up";
-        performanceGraphText.textContent = "Graph";
+        performanceGraphText.textContent = "图表";
     }
     else if (view === "details") {
         performanceGraphIcon.className = "bi bi-list-ul";
-        performanceGraphText.textContent = "Details";
+        performanceGraphText.textContent = "详情";
     }
     else {
         performanceGraphIcon.className = "bi bi-grid-3x2-gap";
-        performanceGraphText.textContent = "Overview";
+        performanceGraphText.textContent = "概述";
     }
 
     document.querySelector("#performanceGraph").classList.toggle("d-none", view !== "graph");
