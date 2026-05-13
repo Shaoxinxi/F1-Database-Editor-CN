@@ -144,7 +144,7 @@ const workerCommands = {
     CONTRACT_PLACEHOLDERS_24.endSeason = Number(yearData[0]) + 1;
 
     const drivers = fetchDrivers(yearData[0]);
-    postMessage({ responseMessage: "Save loaded succesfully", content: drivers, noti_msg: "Save loaded succesfully" });
+    postMessage({ responseMessage: "Save loaded succesfully", content: drivers, noti_msg: "存档加载成功" });
 
     const staff = fetchStaff(yearData[0]);
     postMessage({ responseMessage: "Staff fetched", content: staff });

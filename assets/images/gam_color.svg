@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171 171">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #1e1e1e;
+      }
+
+      .cls-2 {
+        font-family: 'AlibabaPuHuiTi_3_85_Bold', 'Alibaba PuHuiTi 3.0';
+        font-size: 26.37px;
+        letter-spacing: .08em;
+      }
+
+      .cls-4 {
+        fill: #27bd51;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" width="171" height="171" rx="37" ry="37"/>
+  <rect class="cls-3" x="10.26" y="10.26" width="150.48" height="150.48" rx="35.36" ry="35.36" transform="translate(171 0) rotate(90)"/>
+  <g>
+    <polygon class="cls-4" points="93.63 104.55 84.58 120.23 102.69 120.23 93.63 104.55"/>
+    <polygon class="cls-1" points="102.87 56.55 93.82 72.24 84.4 56.55 56.87 104.24 65.92 104.13 75.16 88.13 79.78 96.13 70.72 112.24 42.77 112.24 84.28 40.34 84.4 40.13 84.52 40.34 93.63 56.14 98.13 48.34 84.4 24.55 29.16 120.23 75.1 120.23 88.84 96.24 79.78 80.55 84.4 72.13 102.93 104.24 111.93 104.24 98.07 80.24 103.05 72.45 126.02 112.24 107.67 112.44 112.17 120.23 139.64 120.23 102.87 56.55"/>
+  </g>
+  <text class="cls-2" transform="translate(52.26 146.91)"><tspan x="0" y="0">GAM</tspan></text>
+</svg>

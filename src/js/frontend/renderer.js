@@ -341,10 +341,10 @@ if (saveFileButton && saveFileInput) {
 
     saveFileButton.addEventListener('click', async () => {
         const ok = await confirmModal({
-            title: "Warning about selecting your save file",
-            body: "Selecting your save file this way (in stead of drag and drop) will not save your save in the Recents section. Are you sure you want to continue?",
-            confirmText: "Continue",
-            cancelText: "Cancel"
+            title: "选择存档文件的警告",
+            body: "通过这种方式选择存档文件（而不是拖放）不会将其保存在最近文件中。确定要继续吗？",
+            confirmText: "继续",
+            cancelText: "取消"
         })
         if (ok) {
             saveFileInput.click();
@@ -2502,17 +2502,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     let phrases = [
-        "Change the contract of every staff available in game",
-        "Customize your calendar however you want it",
-        "Edit the attributes of each driver just how you want them",
-        "Create your own custom engines",
-        "Get stories from your save using AI",
-        "Compare drivers and teams with detailed graphs",
-        "Modify car performance to your liking",
-        "Fix game-breaking issues with ease",
-        "No installation required, works in your browser",
-        "Honda, for the love of god, give Alonso a good engine for once",
-        "In memory of Aloy"
+        "修改游戏中每位工作人员的合同",
+        "随心所欲自定义你的赛程",
+        "按你的想法编辑每位车手的属性",
+        "创建你自己的自定义引擎",
+        "使用AI从存档中获取故事",
+        "通过详细图表对比车手和车队",
+        "按你的喜好调整赛车性能",
+        "轻松修复破坏游戏的BUG",
+        "无需安装，在浏览器中直接运行",
+        "本田，求求了，给阿隆索一台好引擎吧",
+        "纪念Aloy"
     ];
 
     //reorder them randomly
@@ -2623,12 +2623,12 @@ function getRecentsTimeLabel(openedDate, now = new Date()) {
     if (diffDays < 0) diffDays = 0;
 
     if (diffDays === 0) {
-        return "Today";
+        return "今天";
     }
     if (diffDays === 1) {
-        return "Yesterday";
+        return "昨天";
     }
-    return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+    return `${diffDays}天前`;
 }
 
 function populateRecentHandles(recents) {
@@ -2673,7 +2673,7 @@ function populateRecentHandles(recents) {
         updateTimeLabel();
 
         lastOpened.addEventListener("mouseenter", () => {
-            lastOpened.textContent = "Remove";
+            lastOpened.textContent = "移除";
         });
 
         lastOpened.addEventListener("mouseleave", () => {

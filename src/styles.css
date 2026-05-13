@@ -73,7 +73,8 @@ body.og-theme .footer {
   flex-direction: row;
   justify-content: space-between;
   max-height: 35px;
-  overflow-y: clip;
+  overflow: visible;
+  overflow-y: visible;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition: opacity 0.15s, transform 0.15s;
@@ -14574,6 +14575,120 @@ body:has(#modpill.active) .creator-separator {
 
 body.og-theme footer a.bi-custom-patreon::before {
   background-color: var(--slight-contrast);
+}
+
+a.bi-custom-modfans::before,
+i.bi-custom-modfans::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url('/assets/images/modfans.svg') no-repeat center;
+  mask: url('/assets/images/modfans.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #94a3b8;
+  transition: background-color 0.15s, mask-image 0.15s, -webkit-mask-image 0.15s;
+}
+
+a.bi-custom-modfans:hover::before {
+  -webkit-mask: url('/assets/images/modfans_color.svg') no-repeat center;
+  mask: url('/assets/images/modfans_color.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #e62d7f;
+}
+
+a.bi-custom-modfans:hover {
+  color: #e62d7f !important;
+}
+
+a.bi-custom-gam::before,
+i.bi-custom-gam::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url('/assets/images/gam.svg') no-repeat center;
+  mask: url('/assets/images/gam.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #94a3b8;
+  transition: background-color 0.15s, mask-image 0.15s, -webkit-mask-image 0.15s;
+}
+
+a.bi-custom-gam:hover::before {
+  background-color: #27bd51;
+}
+
+a.bi-custom-gam:hover {
+  color: #27bd51 !important;
+}
+
+a.bi-custom-editor::before,
+i.bi-custom-editor::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url('/assets/images/editor.svg') no-repeat center;
+  mask: url('/assets/images/editor.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #94a3b8;
+  transition: background-color 0.15s, mask-image 0.15s, -webkit-mask-image 0.15s;
+}
+
+a.bi-custom-editor:hover::before {
+  background-color: #27bd51;
+}
+
+a.bi-custom-editor:hover {
+  color: #27bd51 !important;
+}
+
+.wechat-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.wechat-qr {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.wechat-wrapper:hover .wechat-qr {
+  display: block;
+}
+
+.socials-container .bi-wechat {
+  transition: color 0.15s;
+}
+
+.socials-container .bi-wechat:hover {
+  color: #27bd51 !important;
+}
+
+.socials-container .bi-gem {
+  transition: color 0.15s;
+}
+
+.socials-container .bi-gem:hover {
+  color: #fff !important;
+}
+
+.zhifu-qr {
+  width: 150px;
+  border-radius: 8px;
 }
 
 a.bi-custom-patreon::before,

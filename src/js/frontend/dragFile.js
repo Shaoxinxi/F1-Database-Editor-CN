@@ -157,8 +157,8 @@ async function updateStatusUI(type, textConfig) {
         loadingSpinner.classList.add("show");
         statusCircle.classList.remove("success-mode");
         
-        statusTitle.textContent = "Analyzing database...";
-        statusDesc.innerText = "This may take a few seconds.";
+        statusTitle.textContent = "正在分析数据库...";
+        statusDesc.innerText = "这可能需要几秒钟。";
         
     } else if (type === 'success') {
         loadingSpinner.classList.remove("show");
@@ -168,7 +168,7 @@ async function updateStatusUI(type, textConfig) {
         statusCircle.classList.add("success-mode"); // Fondo verde al circulo
         
         // Textos
-        statusTitle.textContent = "Save loaded successfully!";
+        statusTitle.textContent = "存档加载成功！";
         statusDesc.innerText = textConfig.filename;
 
         await wait(50); 
