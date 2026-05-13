@@ -183,7 +183,7 @@ function initMods2026Actions(){
       const command = new Command("timeTravel", { dayNumber: 46019, mod: "2026" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
     });
   }
@@ -195,7 +195,7 @@ function initMods2026Actions(){
       const command = new Command("changeCalendar", { type: calendarEditMode2026, mod: "2026" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
     });
   }
@@ -229,7 +229,7 @@ function initMods2026Actions(){
       const command = new Command("changeCfd", {mod: "2026"});
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
     });
   }
@@ -246,7 +246,7 @@ function initMods2026Actions(){
         command.execute();
 
         this.classList.add("completed");
-        this.querySelector("span").textContent = "Applied";
+        this.querySelector("span").textContent = "已应用";
         syncMods2026ApplyAllButtonState();
       }
       finally {
@@ -285,7 +285,7 @@ function initMods2026Actions(){
       setRenaultEnginePresentation("honda");
       updateJenzerToDams("dams");
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
       const command2 = new Command("changePerformance", {mod: "2026"});
       command2.execute();
@@ -298,7 +298,7 @@ function initMods2026Actions(){
       const command = new Command("changeStats", {mod: "2026"});
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
     });
   }
@@ -309,7 +309,7 @@ function initMods2026Actions(){
       const command = new Command("extraDrivers", {mod: "2026"});
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026Dependencies();
       syncMods2026ApplyAllButtonState();
     });
@@ -321,7 +321,7 @@ function initMods2026Actions(){
       const command = new Command("changeLineUps", {mod: "2026"});
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2026ApplyAllButtonState();
       document.querySelector("#mods2026View .had-ovr").classList.remove("atfont");
       document.querySelector("#mods2026View .had-ovr").classList.add("rbfont");
@@ -334,7 +334,7 @@ function initMods2026Actions(){
   if (aduoToggle) {
     aduoToggle.addEventListener("click", function () {
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       updateAduoTpEnabled(this.classList.contains("completed"));
     });
   }
@@ -391,7 +391,7 @@ function initMods2025Actions() {
       const command = new Command("timeTravel", { dayNumber: 45657, mod: "2025" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -417,7 +417,7 @@ function initMods2025Actions() {
       if (borOvr) borOvr.classList.add("affont");
 
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -427,7 +427,7 @@ function initMods2025Actions() {
       const command = new Command("changeStats", { mod: "2025" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -437,7 +437,7 @@ function initMods2025Actions() {
       const command = new Command("changeCfd", {mod : "2025"});
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -447,7 +447,7 @@ function initMods2025Actions() {
       const command = new Command("changeRegulations", { mod: "2025" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -457,7 +457,7 @@ function initMods2025Actions() {
       const command = new Command("extraDrivers", { mod: "2025" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
       syncMods2025Dependencies();
     });
   }
@@ -469,7 +469,7 @@ function initMods2025Actions() {
       const command = new Command("changeCalendar", { type: calendarEditMode, mod: "2025" });
       command.execute();
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 
@@ -487,7 +487,7 @@ function initMods2025Actions() {
       if (williams) williams.innerText = "56.8%";
 
       this.classList.add("completed");
-      this.querySelector("span").textContent = "Applied";
+      this.querySelector("span").textContent = "已应用";
     });
   }
 }
@@ -555,7 +555,7 @@ export function syncMods2026ApplyAllButtonState() {
   const allApplied = remaining === 0 && (!aduoToggle || aduoToggle.classList.contains("completed"));
 
   applyAllButton.classList.toggle("applied", allApplied);
-  if (applyAllText) applyAllText.textContent = allApplied ? "Applied" : "Apply all";
+  if (applyAllText) applyAllText.textContent = allApplied ? "已应用" : "应用全部";
 }
 
 export function syncMods2025Dependencies() {
@@ -576,7 +576,7 @@ export function syncMods2025Dependencies() {
 
   lineUpsButton.classList.toggle("disabled", !hasExtraDrivers);
   if (lineUpsText) {
-    lineUpsText.textContent = hasExtraDrivers ? "Apply" : "Requires extra drivers";
+    lineUpsText.textContent = hasExtraDrivers ? "应用" : "需要先应用额外车手";
   }
 }
 
@@ -598,7 +598,7 @@ export function syncMods2026Dependencies() {
 
   lineUpsButton.classList.toggle("disabled", !hasExtraDrivers);
   if (lineUpsText) {
-    lineUpsText.textContent = hasExtraDrivers ? "Apply" : "Requires extra drivers";
+    lineUpsText.textContent = hasExtraDrivers ? "应用" : "需要先应用额外车手";
   }
 }
 
@@ -620,7 +620,7 @@ export function updateMod2026Blocking(data) {
   const allowTimeTravel = data === "Start2024" || data === "AlreadyEdited";
   if (timeTravelButton && !timeTravelButton.classList.contains("completed")) {
     timeTravelButton.classList.toggle("disabled", !allowTimeTravel);
-    if (timeTravelText) timeTravelText.textContent = allowTimeTravel ? "Apply" : "Disabled";
+    if (timeTravelText) timeTravelText.textContent = allowTimeTravel ? "应用" : "不可用";
   }
 
   const allowCalendarEdit = data === "Start2024" || data === "AlreadyEdited";
@@ -630,18 +630,16 @@ export function updateMod2026Blocking(data) {
 
   if (changeCalendarButton && !changeCalendarButton.classList.contains("completed")) {
     changeCalendarButton.classList.toggle("disabled", !allowCalendarEdit);
-    if (changeCalendarText) changeCalendarText.textContent = allowCalendarEdit ? "Apply" : "Disabled";
+    if (changeCalendarText) changeCalendarText.textContent = allowCalendarEdit ? "应用" : "不可用";
   }
 
   if (!modBlocking) return;
   if (data === "AlreadyEdited" || data === "Start2024" ) {
     modBlocking.classList.add("d-none");
     changesGrid.classList.remove("d-none");
-    recommendedDownloads.classList.remove("d-none");
   } else {
     modBlocking.classList.remove("d-none");
     changesGrid.classList.add("d-none");
-    recommendedDownloads.classList.add("d-none");
   }
 }
 
@@ -664,14 +662,14 @@ export function updateMod2025Blocking(data) {
     changesGrid.classList.remove("d-none");
 
     if (timeTravelButton) timeTravelButton.classList.remove("disabled");
-    if (timeTravelText) timeTravelText.textContent = "Apply";
+    if (timeTravelText) timeTravelText.textContent = "应用";
     calendarEditMode = data;
   } else if (data === "Direct2025" || data === "End2024") {
     modBlocking.classList.add("d-none");
     changesGrid.classList.remove("d-none");
 
     if (timeTravelButton) timeTravelButton.classList.add("disabled");
-    if (timeTravelText) timeTravelText.textContent = "Disabled";
+    if (timeTravelText) timeTravelText.textContent = "不可用";
     calendarEditMode = data;
   } else {
     modBlocking.classList.remove("d-none");

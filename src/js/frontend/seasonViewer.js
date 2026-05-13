@@ -504,7 +504,7 @@ function createHeaderCell(trackId, labelSuffix = "", baseClass = "drivers-table-
     let headerPosDiv = document.createElement("div")
     headerPosDiv.classList.add("text-in-front")
     headerPosDiv.classList.add("bold-font")
-    headerPosDiv.innerText = labelSuffix ? `${labelSuffix}` : races_names[trackId]
+    headerPosDiv.innerText = labelSuffix ? (labelSuffix === "SPR" ? "冲刺赛" : labelSuffix) : races_names[trackId]
     if (labelSuffix === "SPR") {
         headerPosDiv.classList.add("sprint-label")
         headerPosDiv.classList.add("sprint-result-cell")

@@ -40,14 +40,14 @@ function formatMoney(val) {
 
 function getSchemeName(id) {
   const n = Number(id);
-  if (n === 1) return "2010–Present";
+  if (n === 1) return "2010至今";
   if (n === 2) return "2003–2009";
   if (n === 3) return "1991–2002";
-  return `Custom Scheme ${n}`;
+  return `自定义方案 ${n}`;
 }
 
 function getPackageName(id) {
-  return `Custom Package ${Number(id)}`;
+  return `自定义套餐 ${Number(id)}`;
 }
 
 function getSelectedPointScheme() {

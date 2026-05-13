@@ -1376,7 +1376,7 @@ function manage_game_year(info) {
         setMaxRaces(24)
         manage_custom_team(info)
         document.querySelectorAll(".brake-cooling-replace").forEach(function (elem) {
-            elem.textContent = "Tyre preservation"
+            elem.textContent = "轮胎保护"
         })
         document.querySelectorAll(".engine24").forEach(function (elem) {
             elem.classList.add("d-none")
@@ -2017,8 +2017,8 @@ function downloadExportedSave(command) {
     dbWorker.postMessage({ command, data: {} });
 }
 
-if (downloadSaveIcon) {
-    downloadSaveIcon.addEventListener("click", function () {
+if (downloadSaveButton) {
+    downloadSaveButton.addEventListener("click", function () {
         downloadExportedSave("exportSave");
     })
 }

@@ -7,11 +7,11 @@ export let codes_dict = {
     "bra0": "../assets/images/brazil.png", "veg0": "../assets/images/usa.png", "uae0": "../assets/images/uae.png", "chi0": "../assets/images/china.png"
 }
 export let countries_dict = {
-    "bah0": "Bahrain", "sau0": "Saudi Arabia", "aus0": "Australia", "aze0": "Azerbaijan",
-    "mia0": "Miami", "imo0": "Imola", "mon0": "Monaco", "spa0": "Spain", "can0": "Canada",
-    "aut0": "Austria", "gbr0": "United Kingdom", "hun0": "Hungary", "bel0": "Belgium", "ned0": "Netherlands",
-    "ita0": "Italy", "sgp0": "Singapore", "jap0": "Japan", "qat0": "Qatar", "usa0": "USA", "mex0": "Mexico",
-    "bra0": "Brazil", "veg0": "Vegas", "uae0": "Abu Dhbai", "chi0": "China"
+    "bah0": "巴林", "sau0": "沙特阿拉伯", "aus0": "澳大利亚", "aze0": "阿塞拜疆",
+    "mia0": "迈阿密", "imo0": "伊莫拉", "mon0": "摩纳哥", "spa0": "西班牙", "can0": "加拿大",
+    "aut0": "奥地利", "gbr0": "英国", "hun0": "匈牙利", "bel0": "比利时", "ned0": "荷兰",
+    "ita0": "意大利", "sgp0": "新加坡", "jap0": "日本", "qat0": "卡塔尔", "usa0": "美国", "mex0": "墨西哥",
+    "bra0": "巴西", "veg0": "拉斯维加斯", "uae0": "阿布扎比", "chi0": "中国"
 };
 
 export let weather_dict = {
@@ -80,7 +80,7 @@ export function getCombinedDict() {
 //performance
 export const pars_abreviations = { "chassis": "C", "front_wing": "FW", "rear_wing": "RW", "underfloor": "UF", "sidepods": "SP", "suspension": "S" }
 export const part_codes_abreviations = { 3: "C", 4: "FW", 5: "RW", 6: "UF", 7: "SP", 8: "S" }
-export const part_full_names = { 3: "Chassis", 4: "Front Wing", 5: "Rear Wing", 6: "Underfloor", 7: "Sidepods", 8: "Suspension" }
+export const part_full_names = { 3: "底盘", 4: "前翼", 5: "后翼", 6: "底板", 7: "侧箱", 8: "悬挂" }
 
 export let abreviations_dict = {
     1: "FE",
@@ -97,13 +97,13 @@ export let abreviations_dict = {
 }
 
 export let engine_stats_dict = new Map([
-    [10, "Power"],
-    [6, "Fuel efficiency"],
-    [11, "Performance threshold"],
-    [12, "Performance loss"],
-    [14, "Engine durability"],
-    [18, "ERS durability"],
-    [19, "Gearbox durability"]
+    [10, "功率"],
+    [6, "燃油效率"],
+    [11, "性能阈值"],
+    [12, "性能衰减"],
+    [14, "引擎耐久"],
+    [18, "ERS耐久"],
+    [19, "变速箱耐久"]
 ]);
 
 export const theme_colors = {
@@ -215,31 +215,31 @@ export const themeToolbarLogos = {
 
 //predictions
 export const names_full = {
-    "BAH": "Bahrain",
-    "AUS": "Australia",
-    "SAU": "Saudi Arabia",
-    "IMO": "Imola",
-    "MIA": "Miami",
-    "SPA": "Spain",
-    "MON": "Monaco",
-    "AZE": "Azerbaijan",
-    "CAN": "Canada",
-    "GBR": "Great Britain",
-    "AUT": "Austria",
-    "FRA": "France",
-    "HUN": "Hungary",
-    "BEL": "Belgium",
-    "ITA": "Italy",
-    "SGP": "Singapore",
-    "JAP": "Japan",
-    "USA": "United States",
-    "MEX": "Mexico",
-    "BRA": "Brazil",
-    "UAE": "Abu Dhabi",
-    "NED": "Netherlands",
-    "VEG": "Vegas",
-    "QAT": "Qatar",
-    "CHI": "China"
+    "BAH": "巴林",
+    "AUS": "澳大利亚",
+    "SAU": "沙特阿拉伯",
+    "IMO": "伊莫拉",
+    "MIA": "迈阿密",
+    "SPA": "西班牙",
+    "MON": "摩纳哥",
+    "AZE": "阿塞拜疆",
+    "CAN": "加拿大",
+    "GBR": "英国",
+    "AUT": "奥地利",
+    "FRA": "法国",
+    "HUN": "匈牙利",
+    "BEL": "比利时",
+    "ITA": "意大利",
+    "SGP": "新加坡",
+    "JAP": "日本",
+    "USA": "美国",
+    "MEX": "墨西哥",
+    "BRA": "巴西",
+    "UAE": "阿布扎比",
+    "NED": "荷兰",
+    "VEG": "拉斯维加斯",
+    "QAT": "卡塔尔",
+    "CHI": "中国"
 };
 
 //seasonViewer
@@ -316,6 +316,7 @@ export let default_points = ["25", "18", "15", "12", "10", "8", "6", "4", "2", "
 //stats
 export let typeStaff_dict = { 0: "fulldriverlist", 1: "fullTechnicalList", 2: "fullEngineerList", 3: "fullAeroList", 4: "fullDirectorList" }
 export let mentality_dict = { 0: "enthusiastic", 1: "positive", 2: "neutral", 3: "negative", 4: "demoralized" }
+export let mentality_labels = { 0: "热情", 1: "积极", 2: "中立", 3: "消极", 4: "沮丧" }
 export let teamOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 32, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 export const mentality_bonuses = { 0: 7, 1: 4, 2: 0, 3: -2, 4: -6 }
 export const mentalityModifiers = {

@@ -1,5 +1,5 @@
 import { inverted_countries_abreviations } from "../backend/scriptUtils/countries";
-import { team_dict, mentalityModifiers, teamOrder, mentality_dict, combined_dict, logos_disc } from "./config";
+import { team_dict, mentalityModifiers, teamOrder, mentality_dict, mentality_labels, combined_dict, logos_disc } from "./config";
 import { colors_dict } from "./head2head";
 import { attachHold } from "./renderer";
 import { insert_space, manageColor, format_name } from "./transfers";
@@ -42,7 +42,7 @@ let selectedAddStaffType = "0";
 let currentDraftId = null;
 
 const staffTypeConfig = {
-    "0": { label: "Drivers", spaceStats: "driverStats" },
+    "0": { label: "车手", spaceStats: "driverStats" },
     "1": { label: "Technical Chiefs", spaceStats: "chiefStats" },
     "2": { label: "Race Engineers", spaceStats: "engineerStats" },
     "3": { label: "H. of Aerodynamics", spaceStats: "aeroStats" },
@@ -1156,7 +1156,7 @@ function load_stats(div) {
                 }
             }
             let nameEmoji = indicator.parentNode.parentNode.querySelector(".mentality-and-emoji")
-            nameEmoji.innerText = capitalizeFirstLetter(mentality_class)
+            nameEmoji.innerText = mentality_labels[mentality];
             nameEmoji.className = "mentality-and-emoji"
             nameEmoji.classList.add(mentality_class)
         }
@@ -1222,7 +1222,7 @@ document.querySelectorAll(".bar-container .bi-chevron-right").forEach(function (
             }
         }
         let nameEmoji = elem.parentNode.parentNode.querySelector(".mentality-and-emoji")
-        nameEmoji.innerText = capitalizeFirstLetter(mentality_class)
+        nameEmoji.innerText = mentality_labels[value];
         nameEmoji.className = "mentality-and-emoji"
         nameEmoji.classList.add(mentality_class)
     })
@@ -1246,7 +1246,7 @@ document.querySelectorAll(".bar-container .bi-chevron-left").forEach(function (e
             }
         }
         let nameEmoji = elem.parentNode.parentNode.querySelector(".mentality-and-emoji")
-        nameEmoji.innerText = capitalizeFirstLetter(mentality_class)
+        nameEmoji.innerText = mentality_labels[value];
         nameEmoji.className = "mentality-and-emoji"
         nameEmoji.classList.add(mentality_class)
     })

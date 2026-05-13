@@ -128,7 +128,7 @@ function addRace(race) {
     let ATAInput;
     let lowerDiv = document.createElement('div');
     lowerDiv.classList.add('lower-race');
-    lowerDiv.innerHTML = "<div class='form-check form-switch'><input class='form-check-input custom-toggle sprint-input' type='checkbox' role='switch'><label class='form-check-label'>Sprint</label></div>";
+    lowerDiv.innerHTML = "<div class='form-check form-switch'><input class='form-check-input custom-toggle sprint-input' type='checkbox' role='switch'><label class='form-check-label'>冲刺赛</label></div>";
     if (game_version === 2023){
         lowerDiv.innerHTML += "<div class='form-check form-switch'><input class='form-check-input custom-toggle ata-input' type='checkbox' role='switch'><label class='form-check-label' for='flexSwitchCheckDefault'>ATA Quali</label></div>";
         ATAInput = lowerDiv.querySelector(".ata-input")
@@ -175,7 +175,8 @@ function addRace(race) {
     qWeather.className = "full-quali-weather"
     let qName = document.createElement('div');
     qName.className = "session-name bold-font"
-    qName.innerText ="Sat"
+    qName.dataset.session = "Sat";
+    qName.innerText = "周六"
     let wSelector = document.createElement('div');
     wSelector.className = "weather-selector"
     let leftArrow = document.createElement('i');
@@ -192,10 +193,12 @@ function addRace(race) {
     qWeather.appendChild(qName)
     qWeather.appendChild(wSelector)
     let rWeather = qWeather.cloneNode(true)
-    rWeather.firstChild.innerText = "Sun"
+    rWeather.firstChild.dataset.session = "Sun";
+    rWeather.firstChild.innerText = "周日"
     rWeather.children[1].children[1].dataset.value = Number(rainR)
     let pWeather = qWeather.cloneNode(true)
-    pWeather.firstChild.innerText = "Fri"
+    pWeather.firstChild.dataset.session = "Fri";
+    pWeather.firstChild.innerText = "周五"
     pWeather.children[1].children[1].dataset.value = Number(rainP)
     rightDiv.appendChild(pWeather)
     rightDiv.appendChild(qWeather)
@@ -209,13 +212,13 @@ function addRace(race) {
                 newVal = 5
             }
             elem.parentNode.querySelector(".weather-vis").dataset.value = newVal
-            if (elem.parentNode.parentNode.firstChild.innerText === "Sat"){
+            if (elem.parentNode.parentNode.firstChild.dataset.session === "Sat"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainQ = newVal
             }
-            else if (elem.parentNode.parentNode.firstChild.innerText === "Sun"){
+            else if (elem.parentNode.parentNode.firstChild.dataset.session === "Sun"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainR = newVal
             }
-            else if (elem.parentNode.parentNode.firstChild.innerText === "Fri"){
+            else if (elem.parentNode.parentNode.firstChild.dataset.session === "Fri"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainP = newVal
             }
             
@@ -232,13 +235,13 @@ function addRace(race) {
                 newVal = 0
             }
             elem.parentNode.querySelector(".weather-vis").dataset.value = newVal
-            if (elem.parentNode.parentNode.firstChild.innerText === "Sat"){
+            if (elem.parentNode.parentNode.firstChild.dataset.session === "Sat"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainQ = newVal
             }
-            else if (elem.parentNode.parentNode.firstChild.innerText === "Sun"){
+            else if (elem.parentNode.parentNode.firstChild.dataset.session === "Sun"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainR = newVal
             }
-            else if (elem.parentNode.parentNode.firstChild.innerText === "Fri"){
+            else if (elem.parentNode.parentNode.firstChild.dataset.session === "Fri"){
                 elem.parentNode.parentNode.parentNode.parentNode.dataset.rainP = newVal
             }
             updateVisualizers()

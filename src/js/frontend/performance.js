@@ -39,16 +39,16 @@ Chart.register(ChartDataLabels);
 Chart.register(annotationPlugin);
 
 const overviewAttributes = [
-    { key: "top_speed", label: "Top speed" },
-    { key: "acceleration", label: "Acceleration" },
-    { key: "low_speed", label: "Low speed" },
-    { key: "medium_speed", label: "Medium speed" },
-    { key: "high_speed", label: "High speed" },
-    { key: "drs", label: "DRS Effectiveness" },
-    { key: "dirty_air", label: "Dirty air tolerance" },
-    { key: "brake_cooling", label: "Brake cooling" },
-    { key: "engine_power", label: "Engine power" },
-    { key: "engine_cooling", label: "Engine cooling" }
+    { key: "top_speed", label: "极速" },
+    { key: "acceleration", label: "加速" },
+    { key: "low_speed", label: "低速" },
+    { key: "medium_speed", label: "中速" },
+    { key: "high_speed", label: "高速" },
+    { key: "drs", label: "DRS效能" },
+    { key: "dirty_air", label: "脏空气耐受" },
+    { key: "brake_cooling", label: "刹车冷却" },
+    { key: "engine_power", label: "引擎功率" },
+    { key: "engine_cooling", label: "引擎冷却" }
     
 ];
 
@@ -145,10 +145,10 @@ function updateExpertiseModeUi() {
         const subtitle = part.querySelector(".part-subtitle");
         if (!subtitle) return;
         if (isExpertise) {
-            if (subtitle.innerText !== "Expertise") {
+            if (subtitle.innerText !== "专长") {
                 subtitle.dataset.performanceText = subtitle.innerText;
             }
-            subtitle.innerText = "Expertise";
+            subtitle.innerText = "专长";
         }
         else if (subtitle.dataset.performanceText) {
             subtitle.innerText = subtitle.dataset.performanceText;
@@ -189,11 +189,11 @@ function updatePerformanceExpertiseButton() {
     button.dataset.value = performanceDetailsMode;
     if (performanceDetailsMode === "expertise") {
         if (icon) icon.className = "bi bi-stars";
-        if (text) text.textContent = "Expertise";
+        if (text) text.textContent = "专长";
     }
     else {
         if (icon) icon.className = "bi bi-speedometer2";
-        if (text) text.textContent = "Performance";
+        if (text) text.textContent = "性能";
     }
 }
 
@@ -988,7 +988,7 @@ function createOverviewCard(attributeConfig) {
     title.classList.add("overview-card-title", "bold-font");
     title.textContent = attributeConfig.label;
     if (attributeConfig.key === "brake_cooling" && game_version === 2024) {
-        title.textContent = "Tyre preservation";
+        title.textContent = "轮胎保护";
     }
     card.appendChild(title);
 
@@ -1174,7 +1174,7 @@ function add_custom_engine(name, stats) {
         engineTitle.value = name
     }
     else {
-        engineTitle.value = "New Engine"
+        engineTitle.value = "新引擎"
     }
     let engineCount = document.querySelectorAll(".custom-engines-div > div").length;
     let engineStatsId = `engineStats${engineCount + 1}`;
@@ -1295,7 +1295,7 @@ function createCustomEngineCard(engineId, name, stats) {
     const nameInput = document.createElement("input")
     nameInput.type = "text"
     nameInput.classList.add("custom-engine-name")
-    nameInput.value = name || "New Engine"
+    nameInput.value = name || "新引擎"
     nameInput.addEventListener("input", function () {
         logo.src = getEngineLogoSrc(nameInput.value)
         const engineDropdownItem = document.querySelector(`#engineMenu a.custom-engine[data-engine="${engineId}"]`)

@@ -10566,9 +10566,9 @@ body.og-theme .records-list {
   color: var(--text-general) !important;
   border: 2px solid transparent !important;
   transition: border-color 0.15s, background-color 0.15s, color 0.15s !important;
-  width: 90px !important;
-  min-width: 90px !important;
-  max-width: 90px !important;
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
   height: 44px;
   display: flex;
   position: relative;
@@ -10585,9 +10585,9 @@ body.og-theme .records-list {
 .scriptPills:focus,
 .scriptPills:focus-visible,
 .scriptPills.active {
-  width: 90px !important;
-  min-width: 90px !important;
-  max-width: 90px !important;
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
   box-shadow: none !important;
   outline: none !important;
 }
@@ -10664,11 +10664,21 @@ body.og-theme .records-list {
   width: 171px;
 }
 
+#modpill {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
 #modpill:hover,
 #modpill:hover .pill-line,
 #modpill.active .pill-line,
 #modpill.active {
-  width: 78px;
+  width: 100px;
+}
+
+#modpill .pill-label {
+  width: 65px;
 }
 
 #specialCarIcon {
@@ -10685,7 +10695,7 @@ body.og-theme .records-list {
 
 
 .download-save-button {
-  width: 44px;
+  width: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10693,6 +10703,7 @@ body.og-theme .records-list {
   height: 40px;
   transition: all 0.15s;
   opacity: 1;
+  gap: 6px;
 }
 
 .download-save-controls {
@@ -10724,23 +10735,34 @@ body.og-theme .records-list {
 
 .download-save-button i {
   font-size: 20px;
-  cursor: pointer;
   background-size: 200% 200%;
   transition: all 0.15s, transform 0s;
   display: inline-block;
 }
 
-.download-save-button i:hover {
+.download-save-button span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-general);
+  transition: all 0.15s;
+}
+
+.download-save-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.download-save-button:hover i,
+.download-save-button:hover span {
   background: linear-gradient(to right, var(--new-primary), var(--text-general), var(--new-primary));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: gradient-move-title 4s infinite linear;
   background-size: 200% 200%;
-  transform: scale(1.1);
 }
 
-.download-save-button i:active {
+.download-save-button:active {
   transform: scale(0.98);
 }
 
@@ -13990,7 +14012,7 @@ body:has(#modpill.active) #mods2026View:not(.d-none) .mod-subtitle-letter {
 }
 
 .mod-creators {
-  display: flex;
+  display: none;
   flex-direction: row;
   gap: 10px;
   align-items: center;

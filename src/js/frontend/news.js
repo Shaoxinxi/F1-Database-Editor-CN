@@ -1463,11 +1463,11 @@ function buildContextualPrompt(data, config = {}) {
 }
 
 const ADUO_ENGINE_STAT_LABELS = {
-  10: "Power",
-  6: "Fuel efficiency",
-  14: "Engine durability",
-  18: "ERS durability",
-  19: "Gearbox durability"
+  10: "功率",
+  6: "燃油效率",
+  14: "引擎耐久",
+  18: "ERS耐久",
+  19: "变速箱耐久"
 };
 
 const ADUO_ENGINE_STAT_ORDER = [10, 6, 14, 18, 19];
@@ -2472,7 +2472,7 @@ async function contextualizePotentialChampion(newData) {
 
       if (afterThis.length > 0) {
         const racesText = afterThis
-          .map(r => `${r.trackName}${r.sprint ? " (Sprint)" : ""}`)
+          .map(r => `${r.trackName}${r.sprint ? " (冲刺赛)" : ""}`)
           .join(", ");
         prompt += `\n\nAfter this race, there will be ${afterThis.length} more: ${racesText}.`;
       } else {
@@ -2941,7 +2941,12 @@ async function contextualizeRaceResults(newData) {
     const second = top3[1];
     const third = top3[2];
     const driverOfTheDayPhrase = `
-      \n\nThe Driver of the Day award went to ${first.name} (${combined_dict[first.teamId]}).\n${second ? `In second place was ${second.name} (${combined_dict[second.teamId]}),` : ''}${third ? ` followed by ${third.name} (${combined_dict[third.teamId]}).` : ''}\n\nWrite a paragraph analyzing why ${first.name.split(' ')[0]} might have received the award, and why the fans also voted for ${second ? second.name.split(' ')[0] : ''}${second && third ? ' and ' : ''}${third ? third.name.split(' ')[0] : ''}.
+      
+
+The Driver of the Day award went to ${first.name} (${combined_dict[first.teamId]}).
+${second ? `In second place was ${second.name} (${combined_dict[second.teamId]}),` : ''}${third ? ` followed by ${third.name} (${combined_dict[third.teamId]}).` : ''}
+
+Write a paragraph analyzing why ${first.name.split(' ')[0]} might have received the award, and why the fans also voted for ${second ? second.name.split(' ')[0] : ''}${second && third ? ' and ' : ''}${third ? third.name.split(' ')[0] : ''}.
     `;
     prompt += driverOfTheDayPhrase;
   }
@@ -3046,7 +3051,12 @@ async function contextualizeRaceReaction(newData) {
     const third = top3[2];
 
     const driverOfTheDayPhrase = `
-      \n\nThe Driver of the Day award went to ${first.name} (${combined_dict[first.teamId]}).\n${second ? `In second place was ${second.name} (${combined_dict[second.teamId]}),` : ''}${third ? ` followed by ${third.name} (${combined_dict[third.teamId]}).` : ''}\n\nWrite a paragraph analyzing why ${first.name.split(' ')[0]} might have received the award, and why the fans also voted for ${second ? second.name.split(' ')[0] : ''}${second && third ? ' and ' : ''}${third ? third.name.split(' ')[0] : ''}.
+      
+
+The Driver of the Day award went to ${first.name} (${combined_dict[first.teamId]}).
+${second ? `In second place was ${second.name} (${combined_dict[second.teamId]}),` : ''}${third ? ` followed by ${third.name} (${combined_dict[third.teamId]}).` : ''}
+
+Write a paragraph analyzing why ${first.name.split(' ')[0]} might have received the award, and why the fans also voted for ${second ? second.name.split(' ')[0] : ''}${second && third ? ' and ' : ''}${third ? third.name.split(' ')[0] : ''}.
     `;
 
     prompt += driverOfTheDayPhrase;
@@ -3093,8 +3103,8 @@ async function contextualizeFeederSeriesReview(newData) {
   });
 
   const contextData =
-    `For Formula 2 and Formula 3, each race weekend includes a Sprint and a Main race.\n` +
-    `In the driver results strings, the format is: Main result (SPR Sprint result).\n` +
+    `在F2和F3中，每个比赛周末包含一场冲刺赛和一场正赛。\n` +
+    `车手成绩字符串格式为：正赛成绩（冲刺赛 冲刺赛成绩）。\n` +
     `\n\n=== Formula 2 ===\n${f2Context}\n\n=== Formula 3 ===\n${f3Context}`;
 
   return {

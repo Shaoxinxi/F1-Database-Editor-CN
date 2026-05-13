@@ -97,9 +97,9 @@ export async function processSaveFile(file) {
                     console.log("[Main Thread] Database loaded in Worker");
                     const dateObj = new Date(msg.data.content);
                     const day = dateObj.getDate();
-                    const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(dateObj);
+                    const month = (dateObj.getMonth() + 1) + "月";
                     const year = dateObj.getFullYear();
-                    const completeDay = day + (day % 10 == 1 && day != 11 ? "st" : day % 10 == 2 && day != 12 ? "nd" : day % 10 == 3 && day != 13 ? "rd" : "th");
+                    const completeDay = String(day);
                     
                     document.querySelector("#dateDay").textContent = completeDay;
                     document.querySelector("#dateMonth").textContent = month;
